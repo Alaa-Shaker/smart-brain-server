@@ -9,11 +9,9 @@ const image =require('./controllers/image');
 var cors = require('cors') ;
 
 var knex = require('knex')({
-  client: 'pg',
-  connection: {
-    connectionString : process.env.DATABASE_URL,
+    client: 'pg',
+    connection : process.env.DATABASE_URL,
     ssl:true
-  }
 });
 
 app.use(express.urlencoded({extend:false}));
