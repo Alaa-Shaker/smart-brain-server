@@ -4,7 +4,8 @@
   "description": "server for smart brain project",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "start:dev": "nodemon server.js"
   },
   "author": "Alaa Shaker",
   "license": "ISC",

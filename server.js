@@ -64,4 +64,4 @@ app.put('/image',(req,res)=>{image.imageHandlePut(req,res,knex)})
 
 app.post('/imageURL',(req,res)=>{image.imageURLHandlePost(req,res)})
 
-app.listen(3000,()=>{ console.log("app is runing porst 3000 !!!");})
+app.listen(process.env.PORT || 3000,()=>{ console.log(`Server runing on port ${process.env.PORT }`);})
