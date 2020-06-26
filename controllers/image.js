@@ -6,7 +6,7 @@ const imageURLHandlePost = (req,res)=>{
   const {imageURL} = req.body ;
   app.models.predict("a403429f2ddf4b49b307e318f00e528b", imageURL)
   .then(data =>{res.json(data) ; })
-  .catch(err => res.status(400).json(err))
+  .catch(err => res.status(400).json("Error connect to Clarifai !!!"))
 
 }
 
