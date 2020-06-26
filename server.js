@@ -11,7 +11,7 @@ var cors = require('cors') ;
 var knex = require('knex')({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
+    host : 'postgresql-rugged-08687',
     user : 'alaa',
     password : '1234',
     database : 'smart'
@@ -25,25 +25,6 @@ app.use(cors())
 
 
 const saltRounds = 10;
-
-const database={users:[
-	{
-		id :0,
-		name :'Alaa',
-		email:'alaa@gmail.com',
-		password:'1234',
-		entries: 0,
-		joined: new Date()
-	} ,
-	{
-		id :1,
-		name :'Mais',
-		email:'mais@gmail.com',
-		password:'1234',
-		entries: 0,
-		joined: new Date()
-
-	} ]};
 
 
 //////////////////////////////
