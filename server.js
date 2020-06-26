@@ -10,12 +10,11 @@ var cors = require('cors') ;
 
 var knex = require('knex')({
   client: 'pg',
-  connection: {
-    host : 'postgresql-rugged-08687',
-    user : 'alaa',
-    password : '1234',
-    database : 'smart'
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
   }
+  
 });
 
 app.use(express.urlencoded({extend:false}));
