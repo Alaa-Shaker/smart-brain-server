@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const register =require('./controllers/register');
 const signIn =require('./controllers/signIn');
 const profile =require('./controllers/profile');
@@ -22,7 +22,7 @@ app.use(cors())
 
 
 
-const saltRounds = 10;
+const saltRounds = bcrypt.genSaltSync(10);
 
 
 //////////////////////////////
