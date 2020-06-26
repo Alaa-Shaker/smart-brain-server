@@ -22,9 +22,6 @@ app.use(cors())
 
 
 
-const saltRounds = bcrypt.genSaltSync(10);
-
-
 //////////////////////////////
 
 app.get('/',(req,res)=>{
@@ -35,7 +32,7 @@ app.get('/',(req,res)=>{
 
 app.post('/signin',(req,res)=>{signIn.signInHandlePost(req,res,knex,bcrypt)})
 
-app.post('/register',(req,res)=>{register.registerHandlePost(req,res,knex,bcrypt,saltRounds)})
+app.post('/register',(req,res)=>{register.registerHandlePost(req,res,knex,bcrypt)})
 
 app.post('/profile/:id',(req,res)=>{profile.profileHandlePost(req,res,knex)})
 

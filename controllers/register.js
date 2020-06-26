@@ -1,11 +1,10 @@
 
 
-const registerHandlePost= (req,res,knex,bcrypt,saltRounds)=>{
+const registerHandlePost= (req,res,knex,bcrypt)=>{
 
 	const {name,email,password} = req.body;
 
-	const salt = bcrypt.genSaltSync(saltRounds);
-	const hash = bcrypt.hashSync(password, salt);
+	const hash = bcrypt.hashSync(password);
 	if(name && password && email)
 	{
 		knex.transaction(trx=> {
